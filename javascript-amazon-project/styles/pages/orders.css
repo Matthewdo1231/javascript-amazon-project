@@ -1,0 +1,45 @@
+.orders-page-body{
+    max-width: 850px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-title{    
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 26px;
+    margin-bottom: 28px;
+}
+
+.orders-grid{
+    display: grid;
+    grid-template-columns: column;
+    row-gap: 50px;
+}
+
+.order-header{
+    display: flex;
+    flex-direction: row;
+    border: 1px  rgb(214, 214, 214) solid;
+    background-color:rgb(243, 241, 241) ;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-header-left-section{
+    flex: .4;
+    height: 20px;
+}
+
+.order-header-middle-section{
+    flex: 1;
+}
+
+.order-header-right-section{
+    flex: 1;
+}
