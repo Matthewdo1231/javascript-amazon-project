@@ -29,6 +29,9 @@
     background-color:rgb(243, 241, 241) ;
     padding: 20px;
     border-radius: 8px;
+    border-bottom: 1px rgb(214, 214, 214) solid;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .order-header-left-section{
@@ -42,4 +45,130 @@
 
 .order-header-right-section{
     flex: 1;
+}
+
+.order-placed-text,.order-placed-total-text,.order-placed-id-text{
+   font-family: Roboto;
+   font-weight: 500;
+}
+
+.current-orders-container{
+    border: 1px rgb(226, 220, 220) solid;
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+}   
+
+.single-order-placed-main-container{
+    display: flex;
+    flex-direction: row;
+
+    border: none;
+    border-color: rgb(214, 214, 214);
+}   
+
+.order-placed-main-container-left{  
+    flex: 1;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-placed-image-container{
+    width: 100px;
+    height: 100px;
+}
+
+.order-placed-image{
+  width: 100%;
+  height: 100%;
+}
+
+.order-placed-main-container-middle{
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.order-placed-product-name{
+    margin-top: 40px;
+
+    font-family: Roboto;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.order-placed-product-delivery-date{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.order-placed-product-quantity{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.order-placed-buy-it-again-button{  
+    margin-left: 15px;
+    margin-top: 5px;
+
+    width: 150px;
+    height:35px;
+    border-radius:8px;
+    border-style: none;
+
+    background-color: rgb(250, 210, 33);
+
+    display: flex;
+}
+
+.order-placed-buy-it-again-box{
+    flex: 1;
+
+    margin-top: 3px;
+    width: 30px;
+    height: 30px;
+}
+.order-placed-buy-it-again-icon{
+    width: 60%;
+    height: 80%;
+
+    margin-right: 2px;
+    margin-top: 1px;
+}
+
+.order-placed-buy-it-again-text{
+    flex: 2;
+
+    margin-top: 6px;
+    margin-left: -5px;
+
+    font-family: Roboto;
+    font-size: 15px;
+}
+
+.order-placed-main-container-right{
+    flex: 2;
+}
+
+.order-placed-track-package-button{
+    margin-top: 40px;
+    margin-left: 30px;
+  
+    width: 220px;
+    height: 35px;
+
+    border-radius: 5px;
+    border: 1px rgb(226, 220, 220) solid;
+    background-color: white;
+
+    font-family: Roboto;
+    font-size: 15px;
+
 }
