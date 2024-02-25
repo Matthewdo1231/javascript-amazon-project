@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orders</title>
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/amazon.css">
+    <link rel="stylesheet" href="styles/pages/orders.css">
+    <link rel="stylesheet" href="styles/pages/tracking.css">
+
+
+  </head>
+  <body class="orders-page-body"> <!-- unify this into one class -->
+    <div class="amazon-header">
+        <div class="amazon-header-left-section">
+          <a href="amazon.html" class="header-link">
+            <img class="amazon-logo"
+              src="images/amazon-logo-white.png">
+            <img class="amazon-mobile-logo"
+              src="images/amazon-mobile-logo-white.png">
+          </a>
+        </div>
+  
+        <div class="amazon-header-middle-section">
+          <input class="search-bar" type="text" placeholder="Search">
+  
+          <button class="search-button">
+            <img class="search-icon" src="images/icons/search-icon.png">
+          </button>
+        </div>
+  
+        <div class="amazon-header-right-section">
+          <a class="orders-link header-link" href="orders.html">
+            <span class="returns-text">Returns</span>
+            <span class="orders-text">& Orders</span>
+          </a>
+  
+          <a class="cart-link header-link" href="checkout.html">
+            <img class="cart-icon" src="images/icons/cart-icon.png">
+            <div class="cart-quantity">3</div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+      </div>
+
+      <a class="tracking-view-orders-hyperlink" href="orders.html">View all orders</a>
+
+      
+
+      <div class="tracking-order-info-main-container">
+        <p class="tracking-delivery-date-text">Arriving on Wednesday, February 28</p>
+        <div class="tracking-product-name-text">Black and Gray Athletic Cotton Socks - 6 Pairs</div>
+        <div class="tracking-product-quantity-text">Quantity: 1
+         </div>
+        <div class="tracking-product-container"><img  class="tracking-product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg"></div>
+           <div class="tracking-progress-container">
+            <p class="tracking-progress-text-preparing">Preparing</p>
+            <p class="tracking-progress-text-shipped">Shipped</p>
+            <p class="tracking-progress-text-delivered">Delivered</p>
+            </div>
+           <div class="tracking-progress-bar-container">
+              <div class="tracking-progress-bar">
+                </div>
+           </div>
+      </div>
+     
+    
+  </body>
+</html>

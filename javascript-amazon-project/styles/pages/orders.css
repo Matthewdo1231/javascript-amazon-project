@@ -165,10 +165,11 @@
     height: 35px;
 
     border-radius: 5px;
-    border: 1px rgb(226, 220, 220) solid;
+    border: 1px rgb(212, 209, 209) solid;
     background-color: white;
 
     font-family: Roboto;
     font-size: 15px;
-
+    color: black    ;
+            
 }

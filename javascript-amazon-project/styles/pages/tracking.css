@@ -1,0 +1,73 @@
+  
+  .tracking-view-orders-hyperlink:visited {
+    color: rgb(56, 118, 209);
+  }
+  
+  .tracking-view-orders-hyperlink:hover {
+    color: rgb(238, 132, 62);
+  }
+  
+  .tracking-delivery-date-text{
+    margin-top: 30px;
+
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .tracking-product-name-text{
+    margin-top: 10px;
+  }
+
+  .tracking-product-quantity-text{
+    margin-top: 3px;
+  }
+
+  .tracking-product-container{
+    margin-top: 26px;
+
+    width: 135px;
+    height: 140px;
+  }
+
+  .tracking-product-image{
+     height: 100%;
+     width: 100%;
+  }
+
+  .tracking-progress-container{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .tracking-progress-text-preparing,.tracking-progress-text-shipped,.tracking-progress-text-delivered{
+    font-size: 20px;
+    font-weight: 500;
+  }
+   
+  .tracking-progress-text-preparing{
+    color: rgb(23, 121, 31);
+  }
+
+  .tracking-progress-bar-container{
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+
+    border-radius: 16px;
+    border:1px solid gray;
+  }
+
+  .tracking-progress-bar{
+    width: 100%;
+    height: 25px;
+
+    border-radius: 16px;
+    background-color: rgb(23, 121, 31)  ;
+
+    width: 8%;
+  }
