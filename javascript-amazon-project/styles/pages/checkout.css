@@ -79,14 +79,16 @@
 }
 
 .checkout-order-list-container{
+  
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr ;
+  row-gap: 10px;
+ 
 }
 
 .checkout-item-container{
-  height: 280px;
-  border-radius: 3px;
-  border: 1px rgb(212, 212, 212) solid;
+  border: 1px rgb(185, 183, 183) solid;
+  border-radius: 5px;
 }
 
 .checkout-item-delivery-date{
@@ -162,5 +164,13 @@
 .delivery-date-radio-box input[type="radio"] {
   width: 20px;
   margin-left: 0px;
+}
+
+
+
+.checkout-order-summary-container{
+  border: 1px rgb(185, 183, 183) solid;
+  border-radius: 5px;
+  height: 320px;
 }
 

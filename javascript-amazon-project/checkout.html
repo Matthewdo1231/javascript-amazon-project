@@ -1,137 +1,190 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Orders</title>
-    <!-- This code is needed for responsive design to work.
+<head>
+  <title>Orders</title>
+  <!-- This code is needed for responsive design to work.
       (Responsive design = make the website look good on
       smaller screen sizes like a phone or a tablet). -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- Load a font called Roboto from Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Here are the CSS files for this page. -->
-    <link rel="stylesheet" href="styles/shared/general.css">
-    <link rel="stylesheet" href="styles/shared/amazon-header.css">
-    <link rel="stylesheet" href="styles/pages/amazon.css">
-    <link rel="stylesheet" href="styles/pages/orders.css">
-    <link rel="stylesheet" href="styles/pages/checkout.css">
+  <!-- Here are the CSS files for this page. -->
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="styles/shared/amazon-header.css">
+  <link rel="stylesheet" href="styles/pages/amazon.css">
+  <link rel="stylesheet" href="styles/pages/orders.css">
+  <link rel="stylesheet" href="styles/pages/checkout.css">
+</head>
 
-  </head>
-  <body class="checkout-page-body">
-    <div class="checkout-header">
-         <div class="checkout-header-left-section">
-             <img class="amazon-checkout-header-logo" src="images/icons/checkout-page/amazon-logo.png">
+<body class="checkout-page-body">
+  <div class="checkout-header">
+    <div class="checkout-header-left-section">
+      <img class="amazon-checkout-header-logo" src="images/icons/checkout-page/amazon-logo.png">
+    </div>
+    <div class="checkout-header-middle-section">
+      <p class="checkout-header-checkout-text">Checkout (<span class="checkout-quantity-value">2 items</span> )</p>
+    </div>
+    <div class="checkout-header-right-section">
+      <img class="checkout-header-lock-icon" src="images/icons/checkout-page/checkout-lock-icon.png">
+    </div>
+  </div>
+
+  <main>
+    <div class="checkout-page-title">Review your order</div>
+
+    <div class="checkout-page-main-container">
+      <div class="checkout-order-list-container">
+        <div class="checkout-item-container">
+          <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
+          <div class="checkout-item-details-grid">
+            <div class="checkout-item-image-box">
+              <img class="checkout-item-image" src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+            </div>
+            <div class="checkout-item-details">
+              <p class="checkout-item-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
+              <p class="checkout-item-price">$7.99</p>
+              <p class="checkout-item-quantity">Quantity: 1 Update Delete</p>
+            </div>
+            <div class="checkout-item-delivery-date-options">
+              <p class="choose-delivery-option-text">Choose a delivery option:</p>
+              <div class="choose-delivery-date-option-box">
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Wednesday March 6</p>
+                    <p>FREE Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Thursday, February 29</p>
+                    <p> $4.99 - Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Tuesday, February 27</p>
+                    <p> $9.99 - Shipping</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-         <div class="checkout-header-middle-section">
-             <p class="checkout-header-checkout-text">Checkout (<span class="checkout-quantity-value">2 items</span> )</p>
+        </div>
+
+
+        <div class="checkout-item-container">
+          <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
+          <div class="checkout-item-details-grid">
+            <div class="checkout-item-image-box">
+              <img class="checkout-item-image" src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+            </div>
+            <div class="checkout-item-details">
+              <p class="checkout-item-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
+              <p class="checkout-item-price">$7.99</p>
+              <p class="checkout-item-quantity">Quantity: 1 Update Delete</p>
+            </div>
+            <div class="checkout-item-delivery-date-options">
+              <p class="choose-delivery-option-text">Choose a delivery option:</p>
+              <div class="choose-delivery-date-option-box">
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Wednesday March 6</p>
+                    <p>FREE Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Thursday, February 29</p>
+                    <p> $4.99 - Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Tuesday, February 27</p>
+                    <p> $9.99 - Shipping</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-         <div class="checkout-header-right-section">
-            <img class="checkout-header-lock-icon" src="images/icons/checkout-page/checkout-lock-icon.png">
+        </div>
+
+        <div class="checkout-item-container">
+          <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
+          <div class="checkout-item-details-grid">
+            <div class="checkout-item-image-box">
+              <img class="checkout-item-image" src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
+            </div>
+            <div class="checkout-item-details">
+              <p class="checkout-item-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
+              <p class="checkout-item-price">$7.99</p>
+              <p class="checkout-item-quantity">Quantity: 1 Update Delete</p>
+            </div>
+            <div class="checkout-item-delivery-date-options">
+              <p class="choose-delivery-option-text">Choose a delivery option:</p>
+              <div class="choose-delivery-date-option-box">
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Wednesday March 6</p>
+                    <p>FREE Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Thursday, February 29</p>
+                    <p> $4.99 - Shipping</p>
+                  </div>
+                </div>
+                <div class="delivery-date-option">
+                  <div class="delivery-date-radio-box">
+                    <input type="radio" name="delivery-date-options" value="option1">
+                  </div>
+                  <div>
+                    <p>Tuesday, February 27</p>
+                    <p> $9.99 - Shipping</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
       </div>
 
-   <main>
-     <div class="checkout-page-title">Review your order</div>
+      <div class="checkout-order-summary-container">
+          
+        </div>
+    </div>
 
-     <div class="checkout-page-main-container">
-        <div class="checkout-order-list-container">
-           <div class="checkout-item-container">
-              <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
-              <div class="checkout-item-details-grid">
-                  <div class="checkout-item-image-box">
-                      <img class="checkout-item-image" src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
-                   </div>
-                  <div class="checkout-item-details">
-                      <p class="checkout-item-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
-                      <p class="checkout-item-price">$7.99</p>
-                      <p class="checkout-item-quantity">Quantity: 1 Update Delete</p>
-                   </div>   
-                  <div class="checkout-item-delivery-date-options">
-                    <p class="choose-delivery-option-text">Choose a delivery option:</p>
-                    <div class="choose-delivery-date-option-box">
-                       <div class="delivery-date-option">
-                           <div class="delivery-date-radio-box">
-                              <input type="radio" name="delivery-date-options" value="option1">
-                             </div>
-                           <div> 
-                             <p>WednesdayMarch</p>
-                             <p> 6 FREE Shipping</p>
-                            </div>
-                         </div>
-                       <div class="delivery-date-option">
-                        <div class="delivery-date-radio-box">
-                          <input type="radio" name="delivery-date-options" value="option1">
-                         </div>
-                         <div> 
-                           <p>Thursday, February 29</p>
-                           <p> $4.99 - Shipping</p>
-                          </div>
-                        </div>
-                       <div class="delivery-date-option">
-                        <div class="delivery-date-radio-box">
-                          <input type="radio" name="delivery-date-options" value="option1">
-                         </div>
-                         <div> 
-                           <p>Tuesday, February 27</p>
-                           <p> $9.99 - Shipping</p>
-                          </div>
-                         </div>
-                     </div>
-               </div>
-            </div>
-            
-            <div class="checkout-item-container">
-              <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
-              <div class="checkout-item-details-grid">
-                  <div class="checkout-item-image-box">
-                      <img class="checkout-item-image" src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
-                   </div>
-                  <div class="checkout-item-details">
-                      <p class="checkout-item-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
-                      <p class="checkout-item-price">$7.99</p>
-                      <p class="checkout-item-quantity">Quantity: 1 Update Delete</p>
-                   </div>   
-                  <div class="checkout-item-delivery-date-options">
-                    <p class="choose-delivery-option-text">Choose a delivery option:</p>
-                    <div class="choose-delivery-date-option-box">
-                       <div class="delivery-date-option">
-                           <div class="delivery-date-radio-box">
-                              <input type="radio" name="delivery-date-options" value="option1">
-                             </div>
-                           <div> 
-                             <p>WednesdayMarch</p>
-                             <p> 6 FREE Shipping</p>
-                            </div>
-                         </div>
-                       <div class="delivery-date-option">
-                        <div class="delivery-date-radio-box">
-                          <input type="radio" name="delivery-date-options" value="option1">
-                         </div>
-                         <div> 
-                           <p>Thursday, February 29</p>
-                           <p> $4.99 - Shipping</p>
-                          </div>
-                        </div>
-                       <div class="delivery-date-option">
-                        <div class="delivery-date-radio-box">
-                          <input type="radio" name="delivery-date-options" value="option1">
-                         </div>
-                         <div> 
-                           <p>Tuesday, February 27</p>
-                           <p> $9.99 - Shipping</p>
-                          </div>
-                         </div>
-                     </div>
-               </div>
-            </div>
+  </main>
 
-         </div>        
-      </div>     
-
-   </main>   
-
-  </body>
+</body>
 </html>
