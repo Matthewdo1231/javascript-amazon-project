@@ -132,10 +132,6 @@
   color: rgb(153, 6, 6);
 }
 
-.checkout-item-quantity{
-
-}
-
 .choose-delivery-option-text{
   margin-bottom: 15px;
 
@@ -171,6 +167,84 @@
 .checkout-order-summary-container{
   border: 1px rgb(185, 183, 183) solid;
   border-radius: 5px;
-  height: 320px;
+  height: 340px;  
 }
 
+.order-summary-header-text{
+  margin:20px;
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.order-summary-items-grid,.order-summary-shipping-grid{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: Roboto;
+}
+
+.order-summary-non-tax-price-grid,.order-summary-taxed-price-grid{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: Roboto;
+
+
+}
+
+.order-summary-non-tax-price-grid{ 
+  margin-top: 20px;
+}
+
+.order-summary-taxed-price-grid{
+padding-bottom: 8px;    
+border-bottom: 1px rgb(212, 209, 209) solid;
+}
+
+.order-summary-order-total-grid{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 18px;  
+  font-weight: bold;
+  color: rgb(161, 6, 6);
+  font-family: Roboto;
+}
+
+.order-payment-option{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 20px;
+  margin-bottom:0px;
+}
+
+.summary-paypal-checkbox{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.place-your-order-container{
+    margin-bottom: -20px;
+}
+
+.place-your-order-button{
+  width: 310px;
+  height: 40px;
+  background-color: rgb(255, 220, 65);
+
+  border-radius: 8px;
+  border-style: none;
+}
