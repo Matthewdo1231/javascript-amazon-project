@@ -78,12 +78,31 @@
   column-gap: 1%;
 }
 
-.checkout-order-list-container{
+@media (max-width: 1000px){
+  .checkout-page-main-container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   
+  .checkout-page-body{
+    max-width: 500px;
+  }
+  
+  .checkout-header{
+    max-width: 500px;
+  }
+
+  .checkout-order-summary-container{
+    margin-bottom: 10px;
+  }
+
+}
+
+.checkout-order-list-container{
   display: grid;
   grid-template-rows: 1fr ;
   row-gap: 10px;
- 
+
 }
 
 .checkout-item-container{
