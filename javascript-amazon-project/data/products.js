@@ -12,7 +12,7 @@ const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c1",
     image: "images/products/intermediate-composite-basketball.jpg",
-    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    name: "Intermediate Size Basketballs",
     rating: {
       stars: 4.0,
       count: 127
