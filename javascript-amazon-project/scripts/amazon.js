@@ -28,7 +28,7 @@ products.forEach((product) => {
    </div>
 
    <div class="product-quantity-container">
-     <select class="js-quantity-selector" id="js-quantity-${product.name}">
+     <select class="js-quantity-selector" id="js-quantity-${product.id}">
        <option selected value="1">1</option>
        <option value="2">2</option>
        <option value="3">3</option>
@@ -49,7 +49,7 @@ products.forEach((product) => {
      Added
    </div>
 
-   <button class="add-to-cart-button button-primary js-add-to-cart-button" data-product-name="${product.name}">
+   <button class="add-to-cart-button button-primary js-add-to-cart-button" data-product-id="${product.id}">
      Add to Cart
    </button>
  </div>`

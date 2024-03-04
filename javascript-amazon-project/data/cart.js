@@ -1,13 +1,24 @@
-export let cart = [];
+export let cartItems = [
+    {
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6', 
+        quantity: 1
+    },
+
+    {
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c1', 
+        quantity: 1
+    }
+
+];
 
 export function cartFunc(button){
     button.addEventListener('click',()=>{
-        const productName = button.dataset.productName;
-        const quantityValue = document.getElementById(`js-quantity-${productName}`).value;
+        const productId = button.dataset.productId;
+        const quantityValue = document.getElementById(`js-quantity-${productId}`).value;
         let matchingItem;
         let cartTotal = 0;
-        cart.forEach((item) => {
-          if(productName === item.productName){
+        cartItems.forEach((item) => {
+          if(productId === item.productId){
             matchingItem = item;
           }
          })
@@ -15,18 +26,18 @@ export function cartFunc(button){
             matchingItem.quantity += Number(quantityValue);
           }
           else{
-            cart.push({
-              productName: productName,
+            cartItems.push({ 
+              productId: productId,
               quantity: Number(quantityValue)
             })
           }
-          cart.forEach((item) => {
+          cartItems.forEach((item) => {
             cartTotal += item.quantity;
            })
     
         document.querySelector('.js-cart-quantity')
         .innerHTML = cartTotal;
     
-        console.log(cart);
+        console.log(cartItems);
       })
 }
