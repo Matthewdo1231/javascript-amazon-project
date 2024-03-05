@@ -3,7 +3,6 @@ import { products } from "../data/products.js"
 
 let checkoutItemHtml = '';
 
-console.log(cartItems)
 
 cartItems.forEach((cartItem) =>{
     let matchingProduct;
