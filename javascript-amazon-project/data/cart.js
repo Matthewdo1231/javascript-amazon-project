@@ -42,12 +42,33 @@ export function cartFunc(button){
         document.querySelector('.js-cart-quantity')
         .innerHTML = cartTotal;
     
-        localStorage.setItem('cartItems',JSON.stringify(cartItems));
+        localStorage.setItem('cartItems',JSON.stringify(cartItems));  
         console.log(cartItems);
       })
 }
 
+export function removeFromCart(productId){
+  const newCart = [];
+  cartItems.forEach((cartItem) =>{
+     if(cartItem.productId !== productId){
+      newCart.push(cartItem);
+     }
+  })
+  cartItems = newCart;
+}
 
 
 
+/*
+function displayCartTotal(){
+  let cartTotal = 0;
+  cartItems.forEach((item) => {
+    cartTotal += item.quantity;
+   })
+  
+  document.querySelector('.js-cart-quantity')
+  .innerHTML = cartTotal;
+  }
 
+  displayCartTotal()
+  */
