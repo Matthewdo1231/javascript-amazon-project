@@ -15,7 +15,7 @@ cartItems.forEach((cartItem) =>{
         }
     })
 
-    //!!!!!!  Make del option interactive
+  
 
     checkoutItemHtml += 
     `<div class="checkout-item-container js-cart-item-container-${matchingProduct.id}" >
@@ -34,7 +34,7 @@ cartItems.forEach((cartItem) =>{
         <p class="choose-delivery-option-text">Choose a delivery option:</p>
         <div class="choose-delivery-date-option-box">   
         
-         ${createDeliveryOptionHtml(matchingProduct)}
+         ${createDeliveryOptionHtml(matchingProduct,cartItem)}
 
       </div>
     </div>
@@ -51,24 +51,31 @@ document.querySelector('.js-checkout-order-list-container')
       link.addEventListener('click',()=> {
          const dataProductId = link.dataset.productId;
          removeFromCart(dataProductId)
-          document.querySelector(`.js-cart-item-container-${dataProductId}`).remove();
+         document.querySelector(`.js-cart-item-container-${dataProductId}`).remove();
       })
   })
+  
 
-
-  function createDeliveryOptionHtml(matchingProduct){
+  function createDeliveryOptionHtml(matchingProduct,cartItem){
     let optionsHtml = '';
     deliveryOption.forEach((deliveryoption)=>{
       let today = dayjs();
       let deliveryOptiondate = today.add(deliveryoption.deliveryDays,'days');
+      let deliveryDateString = deliveryOptiondate.format('dddd MMMM D');
+      let priceString = deliveryoption.priceCents == 0
+        ? `FREE`
+        : `$${(deliveryoption.priceCents / 100).toFixed(2)}`
+      let isChecked = cartItem.deliveryOptionId == deliveryoption.id
+        ?`Checked`
+        :``
       optionsHtml += `
         <div class="delivery-date-option">
         <div class="delivery-date-radio-box">
-        <input type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
+        <input ${isChecked} type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
         </div>
         <div>
-        <p>${deliveryOptiondate.format('dddd MMMM D')}</p>
-        <p>$${(deliveryoption.priceCents / 100).toFixed(2)} - Shipping</p>
+        <p>${deliveryDateString}</p>
+        <p>${priceString} - Shipping</p>
         </div>
     </div>
       `

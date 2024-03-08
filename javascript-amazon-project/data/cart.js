@@ -1,20 +1,5 @@
 export let cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
-if(!cartItems){
-cartItems = [
-    {
-        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6', 
-        quantity: 1
-    },
-
-    {
-        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c1', 
-        quantity: 1
-    }
-    
-  ];
-} 
-
 export function cartFunc(button){
     button.addEventListener('click',()=>{
         const productId = button.dataset.productId;
@@ -31,7 +16,8 @@ export function cartFunc(button){
           else{
             cartItems.push({ 
               productId: productId,
-              quantity: Number(quantityValue)
+              quantity: Number(quantityValue),
+              deliveryOptionId: 1
             })
           }
           displayCartTotal()

@@ -9,6 +9,7 @@ export const deliveryOption = [{
     deliveryDays: 3,
     priceCents: 499
 },
+
 {
     id : '3',
     deliveryDays: 1,
