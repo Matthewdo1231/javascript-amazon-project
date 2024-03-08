@@ -52,7 +52,6 @@ export function removeFromCart(productId){
   saveToStorage();
 }
 
-
 export function saveToStorage(){
   localStorage.setItem('cartItems',JSON.stringify(cartItems));  
 }

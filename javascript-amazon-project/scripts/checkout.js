@@ -1,5 +1,7 @@
 import { cartItems, removeFromCart } from "../data/cart.js"
 import { products } from "../data/products.js"
+import {deliveryOption} from "../data/deliveryoption.js"
+import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js"
 
 let checkoutItemHtml = '';
 
@@ -13,7 +15,7 @@ cartItems.forEach((cartItem) =>{
         }
     })
 
-    //!!Please save cartItems into Local storage to save it when the page unloads, Create a local storage
+    //!!!!!!  Make del option interactive
 
     checkoutItemHtml += 
     `<div class="checkout-item-container js-cart-item-container-${matchingProduct.id}" >
@@ -31,34 +33,10 @@ cartItems.forEach((cartItem) =>{
     <div class="checkout-item-delivery-date-options">
         <p class="choose-delivery-option-text">Choose a delivery option:</p>
         <div class="choose-delivery-date-option-box">   
-        <div class="delivery-date-option">
-            <div class="delivery-date-radio-box">
-            <input type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
-            </div>
-            <div>
-            <p>Wednesday March 6</p>
-            <p>FREE Shipping</p>
-            </div>
-        </div>
-        <div class="delivery-date-option">
-            <div class="delivery-date-radio-box">
-            <input type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
-            </div>
-            <div>
-            <p>Thursday, February 29</p>
-            <p> $4.99 - Shipping</p>
-            </div>
-        </div>
-        <div class="delivery-date-option">
-            <div class="delivery-date-radio-box">
-            <input type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
-            </div>
-            <div>
-            <p>Tuesday, February 27</p>
-            <p> $9.99 - Shipping</p>
-            </div>
-        </div>
-        </div>
+        
+         ${createDeliveryOptionHtml(matchingProduct)}
+
+      </div>
     </div>
     </div>
     </div>`
@@ -76,3 +54,26 @@ document.querySelector('.js-checkout-order-list-container')
           document.querySelector(`.js-cart-item-container-${dataProductId}`).remove();
       })
   })
+
+
+  function createDeliveryOptionHtml(matchingProduct){
+    let optionsHtml = '';
+    deliveryOption.forEach((deliveryoption)=>{
+      let today = dayjs();
+      let deliveryOptiondate = today.add(deliveryoption.deliveryDays,'days');
+      optionsHtml += `
+        <div class="delivery-date-option">
+        <div class="delivery-date-radio-box">
+        <input type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
+        </div>
+        <div>
+        <p>${deliveryOptiondate.format('dddd MMMM D')}</p>
+        <p>$${(deliveryoption.priceCents / 100).toFixed(2)} - Shipping</p>
+        </div>
+    </div>
+      `
+    })
+   return optionsHtml;
+  }
+
+  
