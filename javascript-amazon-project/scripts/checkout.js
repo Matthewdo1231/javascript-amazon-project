@@ -4,8 +4,6 @@ import {deliveryOption} from "../data/deliveryoption.js"
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js"
 
 let checkoutItemHtml = '';
-
-console.log('asdasd') 
     
 cartItems.forEach((cartItem) =>{
     let matchingProduct;
@@ -15,11 +13,9 @@ cartItems.forEach((cartItem) =>{
         }
     })
 
-  
-
     checkoutItemHtml += 
     `<div class="checkout-item-container js-cart-item-container-${matchingProduct.id}" >
-    <p class="checkout-item-delivery-date">Delivery date: Wednesday, March 6</p>
+       ${generateDeliveryDateHeader(matchingProduct)}
     <div class="checkout-item-details-grid">
     <div class="checkout-item-image-box">
         <img class="checkout-item-image" src="${matchingProduct.image}">
@@ -31,7 +27,7 @@ cartItems.forEach((cartItem) =>{
              <span class = "delete-quantity-link js-delete-quantity-link" data-product-id="${matchingProduct.id}">Delete</span></p>
     </div>
     <div class="checkout-item-delivery-date-options">
-        <p class="choose-delivery-option-text">Choose a delivery option:</p>
+        <p class="choose-delivery-option-text">Choose a delivery option:</p>  
         <div class="choose-delivery-date-option-box">   
         
          ${createDeliveryOptionHtml(matchingProduct,cartItem)}
@@ -71,16 +67,34 @@ document.querySelector('.js-checkout-order-list-container')
       optionsHtml += `
         <div class="delivery-date-option">
         <div class="delivery-date-radio-box">
-        <input ${isChecked} type="radio" name="delivery-date-option-${matchingProduct.id}" value="option1">
+        <input ${isChecked} type="radio" name="delivery-date-option-${matchingProduct.id}">
         </div>
         <div>
         <p>${deliveryDateString}</p>
         <p>${priceString} - Shipping</p>
         </div>
-    </div>
-      `
+    </div>`
     })
    return optionsHtml;
   }
+  
+  function generateDeliveryDateHeader(matchingProduct){
+    let deliveryDateHtml = '';
+    let matchingOption;
+    console.log(matchingProduct)
+    deliveryOption.forEach((option)=>{
+        if(matchingProduct.deliveryOptionId == option.id){
+          matchingOption = option;
+        }
+    })
+    let today = dayjs();
+    deliveryDateHtml = `
+    <p class="checkout-item-delivery-date ">Delivery date: 
+    ${today.add(matchingOption.deliveryDays,'days').format('dddd MMMM D')}
+    </p>`
+    return deliveryDateHtml;
+  }
+
+  console.log(cartItems)
 
   

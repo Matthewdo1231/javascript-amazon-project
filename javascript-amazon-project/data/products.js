@@ -19,7 +19,7 @@ export let products = [
       count: 127
     },
     priceCents: 2095,
-    deliveryOptionId: 2
+    deliveryOptionId: 1
   }
 ];
 

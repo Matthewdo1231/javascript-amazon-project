@@ -1,5 +1,12 @@
 export let cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
+if(!cartItems){
+  cartItems = [
+   ]
+  } 
+
+console.log(cartItems)
+
 export function cartFunc(button){
     button.addEventListener('click',()=>{
         const productId = button.dataset.productId;
@@ -52,3 +59,7 @@ export function displayCartTotal(){
   document.querySelector('.js-cart-quantity')
   .innerHTML = cartTotal;
     }
+
+export function updateDeliveryOption(){
+    
+}  
