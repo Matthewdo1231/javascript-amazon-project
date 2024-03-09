@@ -1,4 +1,4 @@
-import {cartFunc, displayCartTotal} from "../data/cart.js"
+import {cartFunc, cartItems, displayCartTotal} from "../data/cart.js"
 import {products} from "../data/products.js"
 
 let productsHtml ='';
@@ -66,5 +66,4 @@ document.querySelectorAll('.js-add-to-cart-button')
 
 displayCartTotal();
 
-
-
+localStorage.removeItem('cartItems')

@@ -1,8 +1,10 @@
-import { cartItems, removeFromCart } from "../data/cart.js"
+import { cartItems, removeFromCart, updateDeliveryOption } from "../data/cart.js"
 import { products } from "../data/products.js"
 import {deliveryOption} from "../data/deliveryoption.js"
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js"
 
+renderCheckoutPage();
+function renderCheckoutPage(){
 let checkoutItemHtml = '';
     
 cartItems.forEach((cartItem) =>{
@@ -65,7 +67,7 @@ document.querySelector('.js-checkout-order-list-container')
         ?`Checked`
         :``
       optionsHtml += `
-        <div class="delivery-date-option">
+        <div class="delivery-date-option js-delivery-date-option" data-product-id="${matchingProduct.id}" data-deliveryoption-id="${deliveryoption.id}">
         <div class="delivery-date-radio-box">
         <input ${isChecked} type="radio" name="delivery-date-option-${matchingProduct.id}">
         </div>
@@ -81,9 +83,14 @@ document.querySelector('.js-checkout-order-list-container')
   function generateDeliveryDateHeader(matchingProduct){
     let deliveryDateHtml = '';
     let matchingOption;
-    console.log(matchingProduct)
+    let matchingItem;
+    cartItems.forEach((item)=>{
+      if(item.productId == matchingProduct.id){
+          matchingItem = item;
+      }
+    })
     deliveryOption.forEach((option)=>{
-        if(matchingProduct.deliveryOptionId == option.id){
+        if(matchingItem.deliveryOptionId == option.id){
           matchingOption = option;
         }
     })
@@ -95,6 +102,14 @@ document.querySelector('.js-checkout-order-list-container')
     return deliveryDateHtml;
   }
 
-  console.log(cartItems)
+  document.querySelectorAll('.js-delivery-date-option')
+   .forEach((option)=>{
+      option.addEventListener('click',()=>{
+        const {productId, deliveryoptionId} = option.dataset;
+        updateDeliveryOption(productId, deliveryoptionId);
+        renderCheckoutPage();
+      })
+   })
+  }
 
   

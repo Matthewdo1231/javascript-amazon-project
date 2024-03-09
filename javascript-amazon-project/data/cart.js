@@ -5,8 +5,6 @@ if(!cartItems){
    ]
   } 
 
-console.log(cartItems)
-
 export function cartFunc(button){
     button.addEventListener('click',()=>{
         const productId = button.dataset.productId;
@@ -60,6 +58,12 @@ export function displayCartTotal(){
   .innerHTML = cartTotal;
     }
 
-export function updateDeliveryOption(){
-    
+export function updateDeliveryOption(productId, optionId){
+    cartItems.forEach((item)=>{
+        if(productId == item.productId){
+            item.deliveryOptionId = optionId;
+        }
+    })
+    saveToStorage();
 }  
+
