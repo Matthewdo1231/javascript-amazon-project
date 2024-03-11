@@ -1,4 +1,5 @@
 export let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+import { renderPaymentSummary } from "../scripts/checkout/payment-summary.js"
 
 if(!cartItems){
   cartItems = [
@@ -40,6 +41,7 @@ export function removeFromCart(productId){
      }
   })
   cartItems = newCart;
+  renderPaymentSummary();
   saveToStorage();
 }
 
