@@ -4,14 +4,14 @@ loadFromStorage();
 
 import { renderPaymentSummary } from "../scripts/checkout/payment-summary.js"
 
+
 export function loadFromStorage(){
 cartItems = JSON.parse(localStorage.getItem('cartItems'));
-
 if(!cartItems){
   cartItems = [
    ]
   } 
-} 
+}
 
 export function addToCart(productId,quantityValue){
   let matchingItem;
@@ -19,7 +19,7 @@ export function addToCart(productId,quantityValue){
     if(productId === item.productId){
       matchingItem = item;
     }
-   })
+  })
     if(matchingItem){
       matchingItem.quantity += Number(quantityValue);
     }
@@ -31,7 +31,7 @@ export function addToCart(productId,quantityValue){
       })
     } 
 
-        saveToStorage();
+    saveToStorage();
 }  
 
 export function cartFunc(button){
