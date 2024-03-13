@@ -82,4 +82,7 @@ export function updateDeliveryOption(productId, optionId){
     saveToStorage();
 }  
 
-
+export const helloWorld = () =>{
+  console.log('Hello, World!');
+}
+   
