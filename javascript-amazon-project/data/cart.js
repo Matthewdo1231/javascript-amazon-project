@@ -1,34 +1,47 @@
-export let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+export let cartItems;
+
+loadFromStorage();
+
 import { renderPaymentSummary } from "../scripts/checkout/payment-summary.js"
+
+export function loadFromStorage(){
+cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
 if(!cartItems){
   cartItems = [
    ]
   } 
+} 
+
+export function addToCart(productId,quantityValue){
+  let matchingItem;
+  cartItems.forEach((item) => {
+    if(productId === item.productId){
+      matchingItem = item;
+    }
+   })
+    if(matchingItem){
+      matchingItem.quantity += Number(quantityValue);
+    }
+    else{
+      cartItems.push({ 
+        productId: productId,
+        quantity: Number(quantityValue),
+        deliveryOptionId: 1
+      })
+    } 
+
+        saveToStorage();
+}  
 
 export function cartFunc(button){
     button.addEventListener('click',()=>{
         const productId = button.dataset.productId;
         const quantityValue = document.getElementById(`js-quantity-${productId}`).value;
-        let matchingItem;
-        cartItems.forEach((item) => {
-          if(productId === item.productId){
-            matchingItem = item;
-          }
-         })
-          if(matchingItem){
-            matchingItem.quantity += Number(quantityValue);
-          }
-          else{
-            cartItems.push({ 
-              productId: productId,
-              quantity: Number(quantityValue),
-              deliveryOptionId: 1
-            })
-          }
-          displayCartTotal()
-    
-        saveToStorage();
+
+        addToCart(productId,quantityValue);
+        
+        displayCartTotal();
   
       })
 }
@@ -68,4 +81,5 @@ export function updateDeliveryOption(productId, optionId){
     })
     saveToStorage();
 }  
+
 

@@ -65,5 +65,3 @@ document.querySelectorAll('.js-add-to-cart-button')
 })
 
 displayCartTotal();
-
-localStorage.removeItem('cartItems')
