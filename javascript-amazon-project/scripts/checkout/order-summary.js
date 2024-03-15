@@ -26,7 +26,7 @@ export function renderOrderSummary(){
         <div class="checkout-item-details">
             <p class="checkout-item-name">${matchingProduct.name}</p>
             <p class="checkout-item-price">$${(matchingProduct.priceCents / 100).toFixed(2)}</p>
-            <p class="checkout-item-quantity">Quantity: ${cartItem.quantity} <span class = "delete-quantity-link">Update</span> 
+            <p class="checkout-item-quantity">Quantity: <span class= "js-item-quantity-${matchingProduct.id}">${cartItem.quantity}</span> <span class = "delete-quantity-link">Update</span> 
                  <span class = "delete-quantity-link js-delete-quantity-link" data-product-id="${matchingProduct.id}">Delete</span></p>
         </div>
         <div class="checkout-item-delivery-date-options">

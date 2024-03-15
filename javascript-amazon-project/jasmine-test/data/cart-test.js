@@ -19,7 +19,7 @@ describe('Test Suite: addToCart',() => {
         expect(localStorage.setItem).toHaveBeenCalledTimes(1);
         expect(cartItems[0].productId).toEqual('e43638ce-6aa0-4b85-b27f-e1d07eb678c6')  
         expect(cartItems[0].quantity).toEqual(2)
-        console.log(cartItems)
+        
     })
 
     it('adds new product to cart', () => {
@@ -48,7 +48,7 @@ describe('Test Suite : Mon-method functions',() => {
     }
 
     spyOn(helloWorldTest, 'helloWorld').and.callFake(()=>{
-        console.log('wtf')
+        console.log('')
     })
     
     helloWorldTest.helloWorld()
